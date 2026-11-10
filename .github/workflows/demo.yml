@@ -2,6 +2,7 @@ name: Demo Workflow
 
 on:
     push:
+    workflow_dispatch:
 
 
 
