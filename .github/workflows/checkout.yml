@@ -1,0 +1,17 @@
+name: Demo Workflow
+
+on:
+    
+    workflow_dispatch:
+
+
+
+jobs:
+      
+    clone:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: Clone the Repository    
+          uses: actions/checkout@v4
+        - name: List the files in repo       
+          run: ls
