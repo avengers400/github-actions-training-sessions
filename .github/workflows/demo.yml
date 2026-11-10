@@ -18,3 +18,10 @@ jobs:
         steps:
         - name: running test workflow
           run: echo "testing my first workflow"
+    multiple-commands:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: running test workflow
+          run: | 
+              echo "testing first command"
+              echo "testing second command"
