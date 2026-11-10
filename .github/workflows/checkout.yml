@@ -3,6 +3,15 @@ name: Checkout Workflow
 on:
     
     workflow_dispatch:
+      inputs:
+        environment:
+           description: 'Select the env to deploy'
+           required: true
+           type: choice
+           options:
+            - dev
+            - qa
+            - prod
 
 
 
@@ -15,3 +24,6 @@ jobs:
           uses: actions/checkout@v4
         - name: List the files in repo       
           run: ls
+        - name: Select the env   
+          run: echo "The selected env is ${{ inputs.environment}}"
+        
