@@ -1,0 +1,19 @@
+name: Error handling
+
+on:
+    workflow_dispatch:
+
+jobs: 
+    demo:
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+
+        steps:
+            - name: Optional Check
+              continue-on-error: true
+              run: exit 1
+            - name: Coninue pipeline
+              run: echo "pipeline contiues"
+            - name: Clean Up
+              if: always()
+              run: echo "Running cleanup"

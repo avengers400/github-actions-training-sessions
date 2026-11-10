@@ -1,0 +1,28 @@
+name: Cron Workflow
+
+on:
+    
+    schedule:
+        - cron: "* * * * *"
+
+
+
+jobs:
+      
+    demo:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: running demo workflow
+          run: echo "running my first workflow"
+    test:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: running test workflow
+          run: echo "testing my first workflow"
+    multiple-commands:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: running test workflow
+          run: | 
+              echo "testing first command"
+              echo "testing second command"
