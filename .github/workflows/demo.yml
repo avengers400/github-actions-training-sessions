@@ -12,3 +12,8 @@ jobs:
         steps:
         - name: running demo workflow
           run: echo "running my first workflow"
+    test:
+        runs-on: ubuntu-latest 
+        steps:
+        - name: running test workflow
+          run: echo "testing my first workflow"
