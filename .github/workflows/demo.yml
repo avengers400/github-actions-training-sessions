@@ -1,0 +1,13 @@
+name: Demo Workflow
+
+on:
+    push:
+        
+runs-on: ubunu-latest
+
+jobs:
+    
+    demo:
+        steps:
+        - name: running demo workflow
+          run: echo "running my first workflow"
